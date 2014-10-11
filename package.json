@@ -1,0 +1,28 @@
+{
+  "name": "just-login-debouncer",
+  "version": "1.1.0",
+  "description": "Doesn't allow too many emails to be sent in a short amount of time.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coding-in-the-wild/just-login-debouncer.git"
+  },
+  "keywords": [
+    "just-login"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/coding-in-the-wild/just-login-debouncer/issues"
+  },
+  "homepage": "https://github.com/coding-in-the-wild/just-login-debouncer",
+  "dependencies": {
+    "debouncer": "^1.0.0",
+    "run-parallel": "^1.0.0"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "tap ./test/*.js"
+  }
+}
