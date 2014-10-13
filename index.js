@@ -1,8 +1,13 @@
 var parallel = require('run-parallel')
+var Debouncer = require('debouncer')
 
-module.exports = function (core) {
-
+module.exports = function (core, db) {
 	var beginAuth = Object.create(core).beginAuthentication
+	var debounce = new Debouncer(debouncingDb, { //Untested :)
+		delayTimeMs: ['0 s', '5 s', '30 s', '5 m', '10 m', '30 m', '1 hr'].map(function (str) {
+			return ms(str)
+		})
+	})
 
 	core.beginAuthentication = function beginAuthentication(sessionId, emailAddress, cb) {
 		parallel({
