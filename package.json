@@ -18,11 +18,14 @@
   "homepage": "https://github.com/coding-in-the-wild/just-login-debouncer",
   "dependencies": {
     "debouncer": "^1.0.0",
+    "ms": "^0.6.2",
     "run-parallel": "^1.0.0"
   },
   "devDependencies": {
+    "level-mem": "^0.18.0",
+    "tap": "^0.4.13"
   },
   "scripts": {
-    "test": "tap ./test/*.js"
+    "test": "node test.js"
   }
 }
