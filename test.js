@@ -38,7 +38,7 @@ test('test debouncing', function (t) {
 					t.ok(err && err.debounce, "debounce error")
 					t.ok(details, 'has details')
 					t.ok(details && details.remaining, 'has details.remaining')
-					t.equal(details && details.allowed.toString(), 'false', 'has details.allowed')
+					t.notOk(details && details.allowed, 'has details.allowed')
 					t.end()
 				})
 			})
