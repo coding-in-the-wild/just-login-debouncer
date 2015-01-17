@@ -36,7 +36,7 @@ module.exports = function (core, db) {
 			} else  { //Email and/or session debounce failed
 				var debounceError = new Error('Email and/or session debounce failure')
 				debounceError.debounce = true
-				cb(debounceError, {
+				cb && cb(debounceError, {
 					allowed: result.email.allowed && result.session.allowed,
 					remaining: Math.max(result.email.remaining, result.session.remaining)
 				})
