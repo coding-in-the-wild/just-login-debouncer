@@ -22,3 +22,7 @@ Wraps `core.beginAuthentication()` with a debounce function for the session id a
 If one session id tries to send emails to multiple email addresses in quick succession, this will ignore the repeats during a certain time period after the first is allowed. The time is extended after each email is sent, but is reduced after a while.
 
 If multiple session ids try to send emails to one email address is quick succession, this will ignore the repeats during a certain time period after the first is allowed. The time is extended after each email is sent, but is reduced after a while.
+
+#License
+
+[VOL](http://veryopenlicense.com/)
