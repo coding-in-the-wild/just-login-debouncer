@@ -30,13 +30,13 @@ module.exports = function (core, db) {
 		},
 		function (err, result) {
 			if (err) {
-				cb(err)
+				cb && cb(err)
 			} else if (result.email.allowed && result.session.allowed) { //This is what we want
 				beginAuth.call(null, sessionId, emailAddress, cb)
 			} else  { //Email and/or session debounce failed
 				var debounceError = new Error('Email and/or session debounce failure')
 				debounceError.debounce = true
-				cb(debounceError, {
+				cb && cb(debounceError, {
 					allowed: result.email.allowed && result.session.allowed,
 					remaining: Math.max(result.email.remaining, result.session.remaining)
 				})
