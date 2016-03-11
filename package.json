@@ -1,6 +1,6 @@
 {
   "name": "just-login-debouncer",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "description": "Doesn't allow too many emails to be sent in a short amount of time.",
   "main": "index.js",
   "repository": {
